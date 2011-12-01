@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73D7355D148738BD00817373 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7355C148738BD00817373 /* UIKit.framework */; };
+		73D7355F148738BD00817373 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7355E148738BD00817373 /* Foundation.framework */; };
+		73D73561148738BD00817373 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D73560148738BD00817373 /* CoreGraphics.framework */; };
+		73D73567148738BD00817373 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73D73565148738BD00817373 /* InfoPlist.strings */; };
+		73D73569148738BD00817373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D73568148738BD00817373 /* main.m */; };
+		73D7356D148738BD00817373 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7356C148738BD00817373 /* AppDelegate.m */; };
+		73D73570148738BD00817373 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7356F148738BD00817373 /* ViewController.m */; };
+		73D73573148738BD00817373 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D73571148738BD00817373 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		73D73558148738BD00817373 /* NumericKeypad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumericKeypad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73D7355C148738BD00817373 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		73D7355E148738BD00817373 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		73D73560148738BD00817373 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73D73564148738BD00817373 /* NumericKeypad-Info.plist */ = {isa = PBXFileReference; path = "NumericKeypad-Info.plist"; sourceTree = "<group>"; };
+		73D73566148738BD00817373 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73D73568148738BD00817373 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		73D7356A148738BD00817373 /* NumericKeypad-Prefix.pch */ = {isa = PBXFileReference; path = "NumericKeypad-Prefix.pch"; sourceTree = "<group>"; };
+		73D7356B148738BD00817373 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		73D7356C148738BD00817373 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		73D7356E148738BD00817373 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		73D7356F148738BD00817373 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		73D73572148738BD00817373 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73D73555148738BD00817373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73D7355D148738BD00817373 /* UIKit.framework in Frameworks */,
+				73D7355F148738BD00817373 /* Foundation.framework in Frameworks */,
+				73D73561148738BD00817373 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73D7354D148738BD00817373 = {
+			isa = PBXGroup;
+			children = (
+				73D73562148738BD00817373 /* NumericKeypad */,
+				73D7355B148738BD00817373 /* Frameworks */,
+				73D73559148738BD00817373 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73D73559148738BD00817373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73D73558148738BD00817373 /* NumericKeypad.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73D7355B148738BD00817373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73D7355C148738BD00817373 /* UIKit.framework */,
+				73D7355E148738BD00817373 /* Foundation.framework */,
+				73D73560148738BD00817373 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73D73562148738BD00817373 /* NumericKeypad */ = {
+			isa = PBXGroup;
+			children = (
+				73D7356B148738BD00817373 /* AppDelegate.h */,
+				73D7356C148738BD00817373 /* AppDelegate.m */,
+				73D7356E148738BD00817373 /* ViewController.h */,
+				73D7356F148738BD00817373 /* ViewController.m */,
+				73D73571148738BD00817373 /* ViewController.xib */,
+				73D73563148738BD00817373 /* Supporting Files */,
+			);
+			path = NumericKeypad;
+			sourceTree = "<group>";
+		};
+		73D73563148738BD00817373 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73D73564148738BD00817373 /* NumericKeypad-Info.plist */,
+				73D73565148738BD00817373 /* InfoPlist.strings */,
+				73D73568148738BD00817373 /* main.m */,
+				73D7356A148738BD00817373 /* NumericKeypad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73D73557148738BD00817373 /* NumericKeypad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73D73576148738BD00817373 /* Build configuration list for PBXNativeTarget "NumericKeypad" */;
+			buildPhases = (
+				73D73554148738BD00817373 /* Sources */,
+				73D73555148738BD00817373 /* Frameworks */,
+				73D73556148738BD00817373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumericKeypad;
+			productName = NumericKeypad;
+			productReference = 73D73558148738BD00817373 /* NumericKeypad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73D7354F148738BD00817373 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 73D73552148738BD00817373 /* Build configuration list for PBXProject "NumericKeypad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 73D7354D148738BD00817373;
+			productRefGroup = 73D73559148738BD00817373 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73D73557148738BD00817373 /* NumericKeypad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73D73556148738BD00817373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73D73567148738BD00817373 /* InfoPlist.strings in Resources */,
+				73D73573148738BD00817373 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73D73554148738BD00817373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73D73569148738BD00817373 /* main.m in Sources */,
+				73D7356D148738BD00817373 /* AppDelegate.m in Sources */,
+				73D73570148738BD00817373 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		73D73565148738BD00817373 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73D73566148738BD00817373 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		73D73571148738BD00817373 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73D73572148738BD00817373 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73D73574148738BD00817373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		73D73575148738BD00817373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73D73577148738BD00817373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumericKeypad/NumericKeypad-Prefix.pch";
+				INFOPLIST_FILE = "NumericKeypad/NumericKeypad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		73D73578148738BD00817373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumericKeypad/NumericKeypad-Prefix.pch";
+				INFOPLIST_FILE = "NumericKeypad/NumericKeypad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73D73552148738BD00817373 /* Build configuration list for PBXProject "NumericKeypad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73D73574148738BD00817373 /* Debug */,
+				73D73575148738BD00817373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73D73576148738BD00817373 /* Build configuration list for PBXNativeTarget "NumericKeypad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73D73577148738BD00817373 /* Debug */,
+				73D73578148738BD00817373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73D7354F148738BD00817373 /* Project object */;
+}
