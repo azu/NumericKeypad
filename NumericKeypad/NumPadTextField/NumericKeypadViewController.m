@@ -34,10 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    // [self updateOutlets];
 }
-
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.

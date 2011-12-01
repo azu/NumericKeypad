@@ -22,6 +22,7 @@
 
     NumericKeypadTextField *numPadTextField = [[NumericKeypadTextField alloc] init];
     numPadTextField.placeholder = @"NUMPAD";
+    numPadTextField.font = [UIFont systemFontOfSize:40];
     numPadTextField.frame = CGRectMake(50, 50, 200, 40);
     [self.view addSubview:numPadTextField];
     [numPadTextField becomeFirstResponder];
