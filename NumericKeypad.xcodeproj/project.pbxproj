@@ -9,28 +9,40 @@
 /* Begin PBXBuildFile section */
 		73D7355D148738BD00817373 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7355C148738BD00817373 /* UIKit.framework */; };
 		73D7355F148738BD00817373 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7355E148738BD00817373 /* Foundation.framework */; };
-		73D73561148738BD00817373 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D73560148738BD00817373 /* CoreGraphics.framework */; };
 		73D73567148738BD00817373 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73D73565148738BD00817373 /* InfoPlist.strings */; };
 		73D73569148738BD00817373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D73568148738BD00817373 /* main.m */; };
 		73D7356D148738BD00817373 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7356C148738BD00817373 /* AppDelegate.m */; };
 		73D73570148738BD00817373 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7356F148738BD00817373 /* ViewController.m */; };
 		73D73573148738BD00817373 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D73571148738BD00817373 /* ViewController.xib */; };
+		73D7357C1487390E00817373 /* NumericKeypadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7357A1487390E00817373 /* NumericKeypadViewController.m */; };
+		73D7357D1487390E00817373 /* NumericKeypad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357B1487390E00817373 /* NumericKeypad.xib */; };
+		73D73580148739C500817373 /* highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357E148739C500817373 /* highlight.png */; };
+		73D73581148739C500817373 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357F148739C500817373 /* normal.png */; };
+		73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7358314873D4600817373 /* NumericKeypadTextField.m */; };
+		73D7358414873D4600817383 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7358414873D4600817382 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73D73558148738BD00817373 /* NumericKeypad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumericKeypad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D7355C148738BD00817373 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		73D7355E148738BD00817373 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		73D73560148738BD00817373 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		73D73564148738BD00817373 /* NumericKeypad-Info.plist */ = {isa = PBXFileReference; path = "NumericKeypad-Info.plist"; sourceTree = "<group>"; };
-		73D73566148738BD00817373 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73D73564148738BD00817373 /* NumericKeypad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumericKeypad-Info.plist"; sourceTree = "<group>"; };
+		73D73566148738BD00817373 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		73D73568148738BD00817373 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		73D7356A148738BD00817373 /* NumericKeypad-Prefix.pch */ = {isa = PBXFileReference; path = "NumericKeypad-Prefix.pch"; sourceTree = "<group>"; };
-		73D7356B148738BD00817373 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		73D7356A148738BD00817373 /* NumericKeypad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumericKeypad-Prefix.pch"; sourceTree = "<group>"; };
+		73D7356B148738BD00817373 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		73D7356C148738BD00817373 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		73D7356E148738BD00817373 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		73D7356E148738BD00817373 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		73D7356F148738BD00817373 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		73D73572148738BD00817373 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		73D735791487390E00817373 /* NumericKeypadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadViewController.h; sourceTree = "<group>"; };
+		73D7357A1487390E00817373 /* NumericKeypadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadViewController.m; sourceTree = "<group>"; };
+		73D7357B1487390E00817373 /* NumericKeypad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumericKeypad.xib; sourceTree = "<group>"; };
+		73D7357E148739C500817373 /* highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highlight.png; sourceTree = "<group>"; };
+		73D7357F148739C500817373 /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
+		73D7358214873D4600817373 /* NumericKeypadTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadTextField.h; sourceTree = "<group>"; };
+		73D7358314873D4600817373 /* NumericKeypadTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadTextField.m; sourceTree = "<group>"; };
+		73D7358414873D4600817382 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +52,7 @@
 			files = (
 				73D7355D148738BD00817373 /* UIKit.framework in Frameworks */,
 				73D7355F148738BD00817373 /* Foundation.framework in Frameworks */,
-				73D73561148738BD00817373 /* CoreGraphics.framework in Frameworks */,
+				73D7358414873D4600817383 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,9 +79,9 @@
 		73D7355B148738BD00817373 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73D7358414873D4600817382 /* QuartzCore.framework */,
 				73D7355C148738BD00817373 /* UIKit.framework */,
 				73D7355E148738BD00817373 /* Foundation.framework */,
-				73D73560148738BD00817373 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -77,12 +89,13 @@
 		73D73562148738BD00817373 /* NumericKeypad */ = {
 			isa = PBXGroup;
 			children = (
+				73D73563148738BD00817373 /* Supporting Files */,
 				73D7356B148738BD00817373 /* AppDelegate.h */,
 				73D7356C148738BD00817373 /* AppDelegate.m */,
 				73D7356E148738BD00817373 /* ViewController.h */,
 				73D7356F148738BD00817373 /* ViewController.m */,
 				73D73571148738BD00817373 /* ViewController.xib */,
-				73D73563148738BD00817373 /* Supporting Files */,
+				73D7358414873D4600817391 /* NumPadTextField */,
 			);
 			path = NumericKeypad;
 			sourceTree = "<group>";
@@ -96,6 +109,28 @@
 				73D7356A148738BD00817373 /* NumericKeypad-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73D7358414873D4600817391 /* NumPadTextField */ = {
+			isa = PBXGroup;
+			children = (
+				73D7358314873D4600817373 /* NumericKeypadTextField.m */,
+				73D7358214873D4600817373 /* NumericKeypadTextField.h */,
+				73D7357A1487390E00817373 /* NumericKeypadViewController.m */,
+				73D735791487390E00817373 /* NumericKeypadViewController.h */,
+				73D7357B1487390E00817373 /* NumericKeypad.xib */,
+				73D7358414873D4600817392 /* Resource */,
+			);
+			path = NumPadTextField;
+			sourceTree = "<group>";
+		};
+		73D7358414873D4600817392 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				73D7357F148739C500817373 /* normal.png */,
+				73D7357E148739C500817373 /* highlight.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +185,9 @@
 			files = (
 				73D73567148738BD00817373 /* InfoPlist.strings in Resources */,
 				73D73573148738BD00817373 /* ViewController.xib in Resources */,
+				73D7357D1487390E00817373 /* NumericKeypad.xib in Resources */,
+				73D73580148739C500817373 /* highlight.png in Resources */,
+				73D73581148739C500817373 /* normal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +201,8 @@
 				73D73569148738BD00817373 /* main.m in Sources */,
 				73D7356D148738BD00817373 /* AppDelegate.m in Sources */,
 				73D73570148738BD00817373 /* ViewController.m in Sources */,
+				73D7357C1487390E00817373 /* NumericKeypadViewController.m in Sources */,
+				73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +212,7 @@
 		73D73565148738BD00817373 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				73D73566148738BD00817373 /* en */,
+				73D73566148738BD00817373 /* InfoPlist.strings */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -239,6 +279,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NumericKeypad/NumericKeypad-Prefix.pch";
 				INFOPLIST_FILE = "NumericKeypad/NumericKeypad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -250,6 +291,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NumericKeypad/NumericKeypad-Prefix.pch";
 				INFOPLIST_FILE = "NumericKeypad/NumericKeypad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +316,7 @@
 				73D73578148738BD00817373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
