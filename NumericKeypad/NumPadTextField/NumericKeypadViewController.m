@@ -7,7 +7,7 @@
 //
 
 #import "NumericKeypadViewController.h"
-
+#import "UITextField+myDeleteBackward.h"
 @implementation NumericKeypadViewController
 
 @synthesize numpadTextFiled;
@@ -30,11 +30,13 @@
 #pragma mark - View lifecycle
 - (void)updateOutlets {
     self.view.backgroundColor = [UIColor grayColor];
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -60,13 +62,16 @@
         }
     }
 }
+
+
+
 // キーボード上のボタン選択値をテキストフィールドにセット
 - (IBAction)buttonPress:(id)sender {
     UIButton *bt = (UIButton *) sender;
     NSString *titleLabel = bt.titleLabel.text;
     NSLog(@"label : %@ , sender %@ ", titleLabel, sender);
     if ([titleLabel isEqualToString:@"⌫"]){
-        [self.numpadTextFiled deleteBackward];
+        [self.numpadTextFiled myDeleteBackward];
     } else {
         [self.numpadTextFiled setText:[self.numpadTextFiled.text stringByAppendingString:titleLabel]];
     }

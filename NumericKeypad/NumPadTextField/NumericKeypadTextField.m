@@ -21,7 +21,6 @@
     return numPadViewController.view;
 }
 
-
 - (void)dealloc {
     [numPadViewController release];
     [super dealloc];

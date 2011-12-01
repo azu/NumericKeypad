@@ -20,6 +20,7 @@
 		73D73581148739C500817373 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357F148739C500817373 /* normal.png */; };
 		73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7358314873D4600817373 /* NumericKeypadTextField.m */; };
 		73D7358414873D4600817383 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7358414873D4600817382 /* QuartzCore.framework */; };
+		73D7358414873D4600817394 /* UITextField+myDeleteBackward.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7358414873D4600817393 /* UITextField+myDeleteBackward.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		73D7358214873D4600817373 /* NumericKeypadTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadTextField.h; sourceTree = "<group>"; };
 		73D7358314873D4600817373 /* NumericKeypadTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadTextField.m; sourceTree = "<group>"; };
 		73D7358414873D4600817382 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73D7358414873D4600817393 /* UITextField+myDeleteBackward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+myDeleteBackward.m"; sourceTree = "<group>"; };
+		73D7358414873D4600817395 /* UITextField+myDeleteBackward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+myDeleteBackward.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 		73D7358414873D4600817391 /* NumPadTextField */ = {
 			isa = PBXGroup;
 			children = (
+				73D7358414873D4600817395 /* UITextField+myDeleteBackward.h */,
+				73D7358414873D4600817393 /* UITextField+myDeleteBackward.m */,
 				73D7358314873D4600817373 /* NumericKeypadTextField.m */,
 				73D7358214873D4600817373 /* NumericKeypadTextField.h */,
 				73D7357A1487390E00817373 /* NumericKeypadViewController.m */,
@@ -203,6 +208,7 @@
 				73D73570148738BD00817373 /* ViewController.m in Sources */,
 				73D7357C1487390E00817373 /* NumericKeypadViewController.m in Sources */,
 				73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */,
+				73D7358414873D4600817394 /* UITextField+myDeleteBackward.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
