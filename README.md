@@ -9,6 +9,7 @@ Subclass of UITextField - Numeric keypad for iPad.
 1. Drag the NumPadTextField foler into your project.
 2. You can use NumericKeypadTextField like this:
 
+ViewController.h, ViewController.m
 
     #import <UIKit/UIKit.h>
     #import "NumericKeypadDelegate.h"
