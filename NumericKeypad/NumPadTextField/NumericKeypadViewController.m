@@ -8,9 +8,13 @@
 
 #import "NumericKeypadViewController.h"
 #import "UITextField+myDeleteBackward.h"
+#import "NumericKeypadDelegate.h"
+
 @implementation NumericKeypadViewController
 
 @synthesize numpadTextFiled;
+@synthesize delegate;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -72,6 +76,10 @@
     NSLog(@"label : %@ , sender %@ ", titleLabel, sender);
     if ([titleLabel isEqualToString:@"⌫"]){
         [self.numpadTextFiled myDeleteBackward];
+    } else if ([titleLabel isEqualToString:@"Save"]){
+        if ([self.delegate respondsToSelector:@selector(saveActionFormTextField:)]){
+            [self.delegate saveActionFormTextField:self.numpadTextFiled];
+        }
     } else {
         [self.numpadTextFiled setText:[self.numpadTextFiled.text stringByAppendingString:titleLabel]];
     }
@@ -80,6 +88,7 @@
 
 - (void)dealloc {
     [numpadTextFiled release];
+    [delegate release];
     [super dealloc];
 }
 

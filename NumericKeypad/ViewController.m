@@ -21,6 +21,7 @@
     [super loadView];
 
     NumericKeypadTextField *numPadTextField = [[NumericKeypadTextField alloc] init];
+    numPadTextField.delegate = self;// delegate for saveActionFormTextField
     numPadTextField.placeholder = @"NUMPAD";
     numPadTextField.font = [UIFont systemFontOfSize:40];
     numPadTextField.frame = CGRectMake(50, 50, 200, 40);
@@ -61,5 +62,10 @@
     // Return YES for supported orientations
     return YES;
 }
+#pragma mark - NumericKeypad delegate
+- (void)saveActionFormTextField:(UITextField *)textField {
+    NSLog(@"text input %@", textField.text);
+}
+
 
 @end

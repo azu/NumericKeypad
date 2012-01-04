@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NumericKeypadDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NumericKeypadDelegate>
 
 @end

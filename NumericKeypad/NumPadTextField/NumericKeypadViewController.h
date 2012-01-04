@@ -10,8 +10,11 @@
 
 @interface NumericKeypadViewController : UIViewController {
     UITextField *numpadTextFiled;
+    id delegate;
 }
 @property(nonatomic, retain) UITextField *numpadTextFiled;
+@property(nonatomic, retain) id delegate;
+
 
 - (void)setActionSubviews:(UIView *)view;
 
