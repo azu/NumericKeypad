@@ -23,6 +23,9 @@
 
 	self.view.backgroundColor = [UIColor grayColor];
 	[self.saveButton setTitle:NSLocalizedString(@"Save", @"Title for save button on numeric keypad") forState:UIControlStateNormal];
+	
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	[self.decimalButton setTitle:formatter.decimalSeparator forState:UIControlStateNormal];
 }
 
 - (void)setActionSubviews :(UIView *)view {
@@ -36,9 +39,9 @@
 - (IBAction)buttonPress:(id)sender {
 	UIButton *button = (UIButton *) sender;
 
-	if (button.tag == 1){
+	if (button == self.backButton) {
 		[self.numpadTextField deleteBackward];
-	} else if (button.tag == 2) {
+	} else if (button == self.saveButton) {
 		if ([self.delegate respondsToSelector:@selector(saveActionFormTextField:)]){
 			[self.delegate saveActionFormTextField:self.numpadTextField];
 		}
@@ -49,6 +52,8 @@
 
 - (void)viewDidUnload {
 	[self setSaveButton:nil];
+	[self setBackButton:nil];
+	[self setDecimalButton:nil];
 	[super viewDidUnload];
 }
 

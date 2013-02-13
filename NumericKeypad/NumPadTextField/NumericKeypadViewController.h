@@ -11,9 +11,11 @@
 @interface NumericKeypadViewController : UIViewController {
 }
 
-@property(nonatomic, strong) UITextField *numpadTextField;
-@property(nonatomic, weak) id delegate;
-@property(nonatomic, weak) IBOutlet UIButton *saveButton;
+@property(strong, nonatomic) UITextField *numpadTextField;
+@property(weak, nonatomic) id delegate;
+@property(weak, nonatomic) IBOutlet UIButton *saveButton;
+@property(weak, nonatomic) IBOutlet UIButton *backButton;
+@property(weak, nonatomic) IBOutlet UIButton *decimalButton;
 
 - (void)setActionSubviews:(UIView *)view;
 
