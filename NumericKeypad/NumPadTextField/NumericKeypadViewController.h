@@ -13,6 +13,7 @@
 
 @property(nonatomic, strong) UITextField *numpadTextField;
 @property(nonatomic, weak) id delegate;
+@property(nonatomic, weak) IBOutlet UIButton *saveButton;
 
 - (void)setActionSubviews:(UIView *)view;
 
