@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface NumericKeypadViewController : UIViewController {
-    UITextField *numpadTextFiled;
-    id delegate;
 }
-@property(nonatomic, retain) UITextField *numpadTextFiled;
-@property(nonatomic, retain) id delegate;
 
+@property(nonatomic, strong) UITextField *numpadTextField;
+@property(nonatomic, weak) id delegate;
 
 - (void)setActionSubviews:(UIView *)view;
 

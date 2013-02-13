@@ -12,9 +12,8 @@
 
 @interface NumericKeypadTextField : UITextField {
     NumericKeypadViewController *numPadViewController;
-    id delegate;
 }
-@property(nonatomic, retain) id delegate;
 
+@property(nonatomic, weak) id numericKeypadDelegate;
 
 @end

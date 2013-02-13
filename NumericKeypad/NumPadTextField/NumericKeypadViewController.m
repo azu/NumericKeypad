@@ -7,44 +7,13 @@
 //
 
 #import "NumericKeypadViewController.h"
-#import "UITextField+myDeleteBackward.h"
 #import "NumericKeypadDelegate.h"
 
 @implementation NumericKeypadViewController
 
-@synthesize numpadTextFiled;
-@synthesize delegate;
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self){
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
 - (void)updateOutlets {
     self.view.backgroundColor = [UIColor grayColor];
-
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -57,7 +26,6 @@
     [self updateOutlets];
 }
 
-// subviewsのボタンにイベントを付ける
 - (void)setActionSubviews :(UIView *)view {
     UIButton *button;
     for (button in view.subviews) {
@@ -67,29 +35,19 @@
     }
 }
 
-
-
-// キーボード上のボタン選択値をテキストフィールドにセット
 - (IBAction)buttonPress:(id)sender {
     UIButton *bt = (UIButton *) sender;
     NSString *titleLabel = bt.titleLabel.text;
-    NSLog(@"label : %@ , sender %@ ", titleLabel, sender);
+
     if ([titleLabel isEqualToString:@"⌫"]){
-        [self.numpadTextFiled myDeleteBackward];
+        [self.numpadTextField deleteBackward];
     } else if ([titleLabel isEqualToString:@"Save"]){
         if ([self.delegate respondsToSelector:@selector(saveActionFormTextField:)]){
-            [self.delegate saveActionFormTextField:self.numpadTextFiled];
+            [self.delegate saveActionFormTextField:self.numpadTextField];
         }
     } else {
-        [self.numpadTextFiled setText:[self.numpadTextFiled.text stringByAppendingString:titleLabel]];
+        [self.numpadTextField setText:[self.numpadTextField.text stringByAppendingString:titleLabel]];
     }
-}
-
-
-- (void)dealloc {
-    [numpadTextFiled release];
-    [delegate release];
-    [super dealloc];
 }
 
 @end

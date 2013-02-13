@@ -10,29 +10,20 @@
 #import "NumericKeypadViewController.h"
 
 @implementation NumericKeypadTextField
-@synthesize delegate;
 
 - (UIView *)inputView {
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-        numPadViewController = [[NumericKeypadViewController alloc]
-                                                             initWithNibName:@"NumericKeypad" bundle:nil];
-        [numPadViewController setActionSubviews:numPadViewController.view];
-        numPadViewController.delegate = self.delegate;
-        // Controllerで操作できるように渡す
-        numPadViewController.numpadTextFiled = self;
-        return numPadViewController.view;
-    }else {
-        return nil;
-    }
+	UIView *view = nil;
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+		numPadViewController = [[NumericKeypadViewController alloc] initWithNibName:@"NumericKeypad" bundle:nil];
+		[numPadViewController setActionSubviews:numPadViewController.view];
+		numPadViewController.delegate = self.numericKeypadDelegate;
+
+		numPadViewController.numpadTextField = self;
+		view = numPadViewController.view;
+	}
+	
+	return view;
 }
-
-
-- (void)dealloc {
-    [numPadViewController release];
-    [delegate release];
-    delegate = nil;
-    [super dealloc];
-}
-
 
 @end
