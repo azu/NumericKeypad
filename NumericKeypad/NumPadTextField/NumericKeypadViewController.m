@@ -28,9 +28,9 @@
 	[self.decimalButton setTitle:formatter.decimalSeparator forState:UIControlStateNormal];
 }
 
-- (void)setActionSubviews :(UIView *)view {
+- (void)setActionSubviews:(UIView *)view {
 	for (UIButton *button in view.subviews) {
-		if ([button isKindOfClass:[UIButton class]]){
+		if ([button isKindOfClass:[UIButton class]]) {
 			[button addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
 		}
 	}
