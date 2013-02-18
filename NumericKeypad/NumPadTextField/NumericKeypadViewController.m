@@ -59,7 +59,7 @@
 			shouldChangeCharacters = [self.numpadTextField.delegate textField:self.numpadTextField shouldChangeCharactersInRange:selectedRange replacementString:button.titleLabel.text];
 		}
 		if (shouldChangeCharacters) {
-			[self.numpadTextField setText:[self.numpadTextField.text stringByReplacingCharactersInRange:selectedRange withString:button.titleLabel.text]];
+			[self.numpadTextField replaceRange:self.numpadTextField.selectedTextRange withText:button.titleLabel.text];
 		}
 		// insertText does not call delegate
 		//[self.numpadTextField insertText:button.titleLabel.text];
