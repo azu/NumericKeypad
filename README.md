@@ -23,13 +23,12 @@ ViewController.h, ViewController.m
         [super loadView];
         // UITextField Subclass
         NumericKeypadTextField *numPadTextField = [[NumericKeypadTextField alloc] init];
-        numPadTextField.delegate = self;// delegate for saveActionFormTextField
+        numPadTextField.numericKeypadDelegate = self;// delegate for saveActionFormTextField
         numPadTextField.placeholder = @"NUMPAD";
         numPadTextField.font = [UIFont systemFontOfSize:40];
         numPadTextField.frame = CGRectMake(50, 50, 200, 40);
         [self.view addSubview:numPadTextField];
         [numPadTextField becomeFirstResponder];
-        [numPadTextField release];
     }
 
     #pragma mark - NumericKeypad delegate

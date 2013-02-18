@@ -39,6 +39,8 @@
 - (IBAction)buttonPress:(id)sender {
 	UIButton *button = (UIButton *) sender;
 
+	[[UIDevice currentDevice] playInputClick];
+
 	if (button == self.backButton) {
 		[self.numpadTextField deleteBackward];
 	} else if (button == self.saveButton) {
@@ -46,7 +48,21 @@
 			[self.delegate saveActionFormTextField:self.numpadTextField];
 		}
 	} else {
-		[self.numpadTextField setText:[self.numpadTextField.text stringByAppendingString:button.titleLabel.text]];
+		BOOL shouldChangeCharacters = YES;
+		UITextRange *selectedTextRange = self.numpadTextField.selectedTextRange;
+		NSUInteger location = [self.numpadTextField offsetFromPosition:self.numpadTextField.beginningOfDocument
+															toPosition:selectedTextRange.start];
+		NSUInteger length = [self.numpadTextField offsetFromPosition:selectedTextRange.start
+														  toPosition:selectedTextRange.end];
+		NSRange selectedRange = NSMakeRange(location, length);
+		if ([self.numpadTextField.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+			shouldChangeCharacters = [self.numpadTextField.delegate textField:self.numpadTextField shouldChangeCharactersInRange:selectedRange replacementString:button.titleLabel.text];
+		}
+		if (shouldChangeCharacters) {
+			[self.numpadTextField setText:[self.numpadTextField.text stringByReplacingCharactersInRange:selectedRange withString:button.titleLabel.text]];
+		}
+		// insertText does not call delegate
+		//[self.numpadTextField insertText:button.titleLabel.text];
 	}
 }
 

@@ -14,7 +14,7 @@
 - (UIView *)inputView {
 	UIView *view = nil;
 	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		numPadViewController = [[NumericKeypadViewController alloc] initWithNibName:@"NumericKeypad" bundle:nil];
 		[numPadViewController setActionSubviews:numPadViewController.view];
 		numPadViewController.delegate = self.numericKeypadDelegate;

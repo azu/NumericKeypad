@@ -19,6 +19,7 @@
 		73D73581148739C500817373 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357F148739C500817373 /* normal.png */; };
 		73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7358314873D4600817373 /* NumericKeypadTextField.m */; };
 		73D7358414873D4600817383 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7358414873D4600817382 /* QuartzCore.framework */; };
+		95256DF316D21D23004AA53F /* NumericKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95256DF216D21D23004AA53F /* NumericKeypadView.m */; };
 		952A568316CB8F540056F476 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952A568216CB8F540056F476 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		73D7358314873D4600817373 /* NumericKeypadTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadTextField.m; sourceTree = "<group>"; };
 		73D7358414873D4600817382 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		73D7358414873D4600817396 /* NumericKeypadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadDelegate.h; sourceTree = "<group>"; };
+		95256DF116D21D23004AA53F /* NumericKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadView.h; sourceTree = "<group>"; };
+		95256DF216D21D23004AA53F /* NumericKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadView.m; sourceTree = "<group>"; };
 		952A568216CB8F540056F476 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		952A568416CB8FC70056F476 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +122,8 @@
 				73D7358414873D4600817396 /* NumericKeypadDelegate.h */,
 				73D7358314873D4600817373 /* NumericKeypadTextField.m */,
 				73D7358214873D4600817373 /* NumericKeypadTextField.h */,
+				95256DF116D21D23004AA53F /* NumericKeypadView.h */,
+				95256DF216D21D23004AA53F /* NumericKeypadView.m */,
 				73D7357A1487390E00817373 /* NumericKeypadViewController.m */,
 				73D735791487390E00817373 /* NumericKeypadViewController.h */,
 				73D7357B1487390E00817373 /* NumericKeypad.xib */,
@@ -207,6 +212,7 @@
 				73D73570148738BD00817373 /* ViewController.m in Sources */,
 				73D7357C1487390E00817373 /* NumericKeypadViewController.m in Sources */,
 				73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */,
+				95256DF316D21D23004AA53F /* NumericKeypadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
