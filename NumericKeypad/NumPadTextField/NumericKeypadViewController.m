@@ -7,89 +7,70 @@
 //
 
 #import "NumericKeypadViewController.h"
-#import "UITextField+myDeleteBackward.h"
 #import "NumericKeypadDelegate.h"
 
 @implementation NumericKeypadViewController
 
-@synthesize numpadTextFiled;
-@synthesize delegate;
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self){
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
-- (void)updateOutlets {
-    self.view.backgroundColor = [UIColor grayColor];
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	// Return YES for supported orientations
+	return NO;
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
+
+	self.view.backgroundColor = [UIColor grayColor];
+	[self.saveButton setTitle:NSLocalizedString(@"Save", @"Title for save button on numeric keypad") forState:UIControlStateNormal];
+	
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	[self.decimalButton setTitle:formatter.decimalSeparator forState:UIControlStateNormal];
+}
+
+- (void)setActionSubviews:(UIView *)view {
+	for (UIButton *button in view.subviews) {
+		if ([button isKindOfClass:[UIButton class]]) {
+			[button addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
+		}
+	}
+}
+
+- (IBAction)buttonPress:(id)sender {
+	UIButton *button = (UIButton *) sender;
+
+	[[UIDevice currentDevice] playInputClick];
+
+	if (button == self.backButton) {
+		[self.numpadTextField deleteBackward];
+	} else if (button == self.saveButton) {
+		if ([self.delegate respondsToSelector:@selector(saveActionFormTextField:)]){
+			[self.delegate saveActionFormTextField:self.numpadTextField];
+		}
+	} else {
+		BOOL shouldChangeCharacters = YES;
+		UITextRange *selectedTextRange = self.numpadTextField.selectedTextRange;
+		NSUInteger location = [self.numpadTextField offsetFromPosition:self.numpadTextField.beginningOfDocument
+															toPosition:selectedTextRange.start];
+		NSUInteger length = [self.numpadTextField offsetFromPosition:selectedTextRange.start
+														  toPosition:selectedTextRange.end];
+		NSRange selectedRange = NSMakeRange(location, length);
+		if ([self.numpadTextField.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+			shouldChangeCharacters = [self.numpadTextField.delegate textField:self.numpadTextField shouldChangeCharactersInRange:selectedRange replacementString:button.titleLabel.text];
+		}
+		if (shouldChangeCharacters) {
+			[self.numpadTextField replaceRange:self.numpadTextField.selectedTextRange withText:button.titleLabel.text];
+		}
+		// insertText does not call delegate
+		//[self.numpadTextField insertText:button.titleLabel.text];
+	}
 }
 
 - (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return NO;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self updateOutlets];
-}
-
-// subviewsのボタンにイベントを付ける
-- (void)setActionSubviews :(UIView *)view {
-    UIButton *button;
-    for (button in view.subviews) {
-        if ([button isKindOfClass:[UIButton class]]){
-            [button addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
-        }
-    }
-}
-
-
-
-// キーボード上のボタン選択値をテキストフィールドにセット
-- (IBAction)buttonPress:(id)sender {
-    UIButton *bt = (UIButton *) sender;
-    NSString *titleLabel = bt.titleLabel.text;
-    NSLog(@"label : %@ , sender %@ ", titleLabel, sender);
-    if ([titleLabel isEqualToString:@"⌫"]){
-        [self.numpadTextFiled myDeleteBackward];
-    } else if ([titleLabel isEqualToString:@"Save"]){
-        if ([self.delegate respondsToSelector:@selector(saveActionFormTextField:)]){
-            [self.delegate saveActionFormTextField:self.numpadTextFiled];
-        }
-    } else {
-        [self.numpadTextFiled setText:[self.numpadTextFiled.text stringByAppendingString:titleLabel]];
-    }
-}
-
-
-- (void)dealloc {
-    [numpadTextFiled release];
-    [delegate release];
-    [super dealloc];
+	[self setSaveButton:nil];
+	[self setBackButton:nil];
+	[self setDecimalButton:nil];
+	[super viewDidUnload];
 }
 
 @end
