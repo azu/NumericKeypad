@@ -8,5 +8,8 @@
 @class NumericKeypadTextField;
 
 @protocol NumericKeypadDelegate
+
+@optional
 - (void)saveActionFormTextField:(UITextField *)textField;
+
 @end

@@ -13,14 +13,14 @@
 		73D73569148738BD00817373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D73568148738BD00817373 /* main.m */; };
 		73D7356D148738BD00817373 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7356C148738BD00817373 /* AppDelegate.m */; };
 		73D73570148738BD00817373 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7356F148738BD00817373 /* ViewController.m */; };
-		73D73573148738BD00817373 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D73571148738BD00817373 /* ViewController.xib */; };
 		73D7357C1487390E00817373 /* NumericKeypadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7357A1487390E00817373 /* NumericKeypadViewController.m */; };
 		73D7357D1487390E00817373 /* NumericKeypad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357B1487390E00817373 /* NumericKeypad.xib */; };
 		73D73580148739C500817373 /* highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357E148739C500817373 /* highlight.png */; };
 		73D73581148739C500817373 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D7357F148739C500817373 /* normal.png */; };
 		73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7358314873D4600817373 /* NumericKeypadTextField.m */; };
 		73D7358414873D4600817383 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7358414873D4600817382 /* QuartzCore.framework */; };
-		73D7358414873D4600817394 /* UITextField+myDeleteBackward.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D7358414873D4600817393 /* UITextField+myDeleteBackward.m */; };
+		95256DF316D21D23004AA53F /* NumericKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95256DF216D21D23004AA53F /* NumericKeypadView.m */; };
+		952A568316CB8F540056F476 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952A568216CB8F540056F476 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +29,12 @@
 		73D7355E148738BD00817373 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		73D73564148738BD00817373 /* NumericKeypad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumericKeypad-Info.plist"; sourceTree = "<group>"; };
 		73D73566148738BD00817373 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		73D73568148738BD00817373 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		73D73568148738BD00817373 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		73D7356A148738BD00817373 /* NumericKeypad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumericKeypad-Prefix.pch"; sourceTree = "<group>"; };
 		73D7356B148738BD00817373 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		73D7356C148738BD00817373 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		73D7356E148738BD00817373 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		73D7356F148738BD00817373 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		73D73572148738BD00817373 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		73D735791487390E00817373 /* NumericKeypadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadViewController.h; sourceTree = "<group>"; };
 		73D7357A1487390E00817373 /* NumericKeypadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadViewController.m; sourceTree = "<group>"; };
 		73D7357B1487390E00817373 /* NumericKeypad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumericKeypad.xib; sourceTree = "<group>"; };
@@ -44,9 +43,11 @@
 		73D7358214873D4600817373 /* NumericKeypadTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadTextField.h; sourceTree = "<group>"; };
 		73D7358314873D4600817373 /* NumericKeypadTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadTextField.m; sourceTree = "<group>"; };
 		73D7358414873D4600817382 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		73D7358414873D4600817393 /* UITextField+myDeleteBackward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+myDeleteBackward.m"; sourceTree = "<group>"; };
-		73D7358414873D4600817395 /* UITextField+myDeleteBackward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+myDeleteBackward.h"; sourceTree = "<group>"; };
 		73D7358414873D4600817396 /* NumericKeypadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadDelegate.h; sourceTree = "<group>"; };
+		95256DF116D21D23004AA53F /* NumericKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericKeypadView.h; sourceTree = "<group>"; };
+		95256DF216D21D23004AA53F /* NumericKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericKeypadView.m; sourceTree = "<group>"; };
+		952A568216CB8F540056F476 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		952A568416CB8FC70056F476 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +94,12 @@
 		73D73562148738BD00817373 /* NumericKeypad */ = {
 			isa = PBXGroup;
 			children = (
+				952A568216CB8F540056F476 /* ViewController.xib */,
 				73D73563148738BD00817373 /* Supporting Files */,
 				73D7356B148738BD00817373 /* AppDelegate.h */,
 				73D7356C148738BD00817373 /* AppDelegate.m */,
 				73D7356E148738BD00817373 /* ViewController.h */,
 				73D7356F148738BD00817373 /* ViewController.m */,
-				73D73571148738BD00817373 /* ViewController.xib */,
 				73D7358414873D4600817391 /* NumPadTextField */,
 			);
 			path = NumericKeypad;
@@ -119,10 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				73D7358414873D4600817396 /* NumericKeypadDelegate.h */,
-				73D7358414873D4600817395 /* UITextField+myDeleteBackward.h */,
-				73D7358414873D4600817393 /* UITextField+myDeleteBackward.m */,
 				73D7358314873D4600817373 /* NumericKeypadTextField.m */,
 				73D7358214873D4600817373 /* NumericKeypadTextField.h */,
+				95256DF116D21D23004AA53F /* NumericKeypadView.h */,
+				95256DF216D21D23004AA53F /* NumericKeypadView.m */,
 				73D7357A1487390E00817373 /* NumericKeypadViewController.m */,
 				73D735791487390E00817373 /* NumericKeypadViewController.h */,
 				73D7357B1487390E00817373 /* NumericKeypad.xib */,
@@ -166,7 +167,7 @@
 		73D7354F148738BD00817373 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 73D73552148738BD00817373 /* Build configuration list for PBXProject "NumericKeypad" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -174,6 +175,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 73D7354D148738BD00817373;
 			productRefGroup = 73D73559148738BD00817373 /* Products */;
@@ -191,10 +193,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D73567148738BD00817373 /* InfoPlist.strings in Resources */,
-				73D73573148738BD00817373 /* ViewController.xib in Resources */,
 				73D7357D1487390E00817373 /* NumericKeypad.xib in Resources */,
 				73D73580148739C500817373 /* highlight.png in Resources */,
 				73D73581148739C500817373 /* normal.png in Resources */,
+				952A568316CB8F540056F476 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +212,7 @@
 				73D73570148738BD00817373 /* ViewController.m in Sources */,
 				73D7357C1487390E00817373 /* NumericKeypadViewController.m in Sources */,
 				73D7358414873D4600817373 /* NumericKeypadTextField.m in Sources */,
-				73D7358414873D4600817394 /* UITextField+myDeleteBackward.m in Sources */,
+				95256DF316D21D23004AA53F /* NumericKeypadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,16 +223,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				73D73566148738BD00817373 /* InfoPlist.strings */,
+				952A568416CB8FC70056F476 /* de */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		73D73571148738BD00817373 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73D73572148738BD00817373 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -241,6 +236,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -254,6 +253,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -266,12 +266,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -284,10 +289,10 @@
 		73D73577148738BD00817373 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NumericKeypad/NumericKeypad-Prefix.pch";
 				INFOPLIST_FILE = "NumericKeypad/NumericKeypad-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -296,10 +301,10 @@
 		73D73578148738BD00817373 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NumericKeypad/NumericKeypad-Prefix.pch";
 				INFOPLIST_FILE = "NumericKeypad/NumericKeypad-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
