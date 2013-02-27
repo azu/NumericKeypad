@@ -50,10 +50,10 @@
 	} else {
 		BOOL shouldChangeCharacters = YES;
 		UITextRange *selectedTextRange = self.numpadTextField.selectedTextRange;
-		NSUInteger location = [self.numpadTextField offsetFromPosition:self.numpadTextField.beginningOfDocument
-															toPosition:selectedTextRange.start];
-		NSUInteger length = [self.numpadTextField offsetFromPosition:selectedTextRange.start
-														  toPosition:selectedTextRange.end];
+		NSUInteger location = (NSUInteger)[self.numpadTextField offsetFromPosition:self.numpadTextField.beginningOfDocument
+                                                                        toPosition:selectedTextRange.start];
+		NSUInteger length = (NSUInteger)[self.numpadTextField offsetFromPosition:selectedTextRange.start
+                                                                      toPosition:selectedTextRange.end];
 		NSRange selectedRange = NSMakeRange(location, length);
 		if ([self.numpadTextField.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
 			shouldChangeCharacters = [self.numpadTextField.delegate textField:self.numpadTextField shouldChangeCharactersInRange:selectedRange replacementString:button.titleLabel.text];
@@ -61,8 +61,6 @@
 		if (shouldChangeCharacters) {
 			[self.numpadTextField replaceRange:self.numpadTextField.selectedTextRange withText:button.titleLabel.text];
 		}
-		// insertText does not call delegate
-		//[self.numpadTextField insertText:button.titleLabel.text];
 	}
 }
 
